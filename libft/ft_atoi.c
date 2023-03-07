@@ -6,7 +6,13 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:01 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/07 13:59:43 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/07 18:53:08 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+int     ft_atoi(const char *nptr)
+{
+
+}
