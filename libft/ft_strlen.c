@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:50:56 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/07 18:04:21 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/07 18:57:19 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,9 @@ size_t ft_strlen(const char *str)
         i++;
     }
     return (i);
+}
+
+int main()
+{
+    printf("%ld", ft_strlen("jessica"));
 }
