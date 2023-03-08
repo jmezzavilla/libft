@@ -6,7 +6,21 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:50:26 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/07 13:59:43 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/07 21:38:17 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
+}
+
+/*int	main(void)
+{
+	printf("%d", ft_isascii('9'));
+}*/

@@ -6,21 +6,21 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:50:05 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/07 19:55:03 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/07 21:33:15 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if(ft_isalpha(c) || ft_isdigit(c))
-        return(1);
-    else
-        return(0);
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
+	else
+		return (0);
 }
 
-int main()
+/*int main()
 {
-    printf("%d", ft_isalnum('@'));
-}
+    printf("%d", ft_isalnum('1'));
+}*/

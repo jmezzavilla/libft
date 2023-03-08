@@ -12,5 +12,9 @@
 	],
 	"codam-norminette-3.highlight-color": "rgba(255, 0, 0, 0.2)", // highlight norm errors in custom color. Can be in rgba, hex, or vscode.ThemeColor format.
 	"codam-norminette-3.displayErrorName": false,
-	"C_Cpp.errorSquiggles": "disabled" // display name of error on hover
+	"C_Cpp.errorSquiggles": "disabled", // display name of error on hover
+	"[c]": {
+		"editor.defaultFormatter": "keyhr.42-c-format"
+	}
+	
 }

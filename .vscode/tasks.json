@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: gcc arquivo de build ativo",
+			"label": "Build C Project",
 			"command": "/usr/bin/gcc",
 			"args": [
 				"-Wall",
