@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 13:46:49 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/08 22:35:07 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/11 19:33:59 by vmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ char	*ft_strchr(const char *s, int c)
 	int	count;
 
 	count = 0;
-	while (s[count] != '\0')
+	while (s[count] != (char)c)
 	{
-		if (s[count] == (char)c)
-			return ((char *)(s + count));
+		if (s[count] == '\0')
+			return (NULL);
 		count++;
 	}
-	return (NULL);
+	return ((char *)(s + count));
 }
 
 /*int	main(void)
