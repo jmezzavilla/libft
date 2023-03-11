@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:01 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/09 20:56:05 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/11 12:44:23 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,9 @@ int	ft_atoi(const char *nptr)
     return(result * sign);
 }
 
-/*int main(void)
+/*+int main(void)
 {
-	char *sa = " +11234ab567";
+	char *sa = " -11234ab567";
 
 	printf("custom = %d\n", ft_atoi(sa));
 }*/
