@@ -6,26 +6,24 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:22 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/08 22:35:01 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/11 18:25:49 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t count;
+	size_t	count;
 
 	count = ft_strlen(s);
-	
-    while (count >= 0)
-    {
-        if (s[count] == (char)c)
-        {
-	        return ((char *)(s + count));
-        }
-        count--;
-    }
+	while (count--)
+	{
+		if (s[count] == (char)c)
+		{
+			return ((char *)(s + count));
+		}
+	}
 	return (NULL);
 }
 

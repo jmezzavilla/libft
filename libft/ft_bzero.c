@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:51:35 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/09 22:16:11 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/11 18:19:45 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *p;
-	size_t i;
+	unsigned char	*p;
+	size_t			i;
 
 	p = s;
 	i = 0;
-
 	while (i < n)
 	{
-        *p++ = 0;
-        i++;
+		*p++ = 0;
+		i++;
 	}
 }
 

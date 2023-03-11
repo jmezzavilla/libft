@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:19 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/08 22:35:05 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/11 18:21:27 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,25 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-        size_t b_count;
-        size_t l_count;
+	size_t	b_count;
+	size_t	l_count;
 
-        b_count = 0;
-
-        while(big[b_count])
-        {
-                l_count = 0;
-                while(big[b_count + l_count] == little[l_count] && (b_count + l_count) <= len)
-                {
-                        if(little[l_count + 1] != '\0')
-                        {       
-                                return((char *)&big[b_count]);
-                        }
-                        l_count++;
-                }
-
-                b_count++;
-        }
-        return(0);
+	b_count = 0;
+	while (big[b_count])
+	{
+		l_count = 0;
+		while (big[b_count + l_count] == little[l_count] && (b_count
+				+ l_count) <= len)
+		{
+			if (little[l_count + 1] != '\0')
+			{
+				return ((char *)&big[b_count]);
+			}
+			l_count++;
+		}
+		b_count++;
+	}
+	return (0);
 }
 
 /*int	main(void)

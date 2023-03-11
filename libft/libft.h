@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:48:10 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/11 18:00:03 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/11 18:22:19 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,8 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
-
-
 //chapter two
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-
-
-
 
 #endif

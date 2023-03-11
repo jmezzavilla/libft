@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:13 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/09 23:00:46 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/11 18:22:55 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 char	*ft_strdup(const char *s)
 {
-	char *dest;
+	char	*dest;
+
 	dest = malloc(ft_strlen(s) + 1);
 	if (dest == NULL)
 		return (NULL);
-    
-    ft_strlcpy(dest, s, ft_strlen(s) + 1);
-    return(dest);
+	ft_strlcpy(dest, s, ft_strlen(s) + 1);
+	return (dest);
 }
 
 /*int main(void)
