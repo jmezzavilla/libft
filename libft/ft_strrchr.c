@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:22 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/08 15:23:23 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/08 22:35:01 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 char *ft_strrchr(const char *s, int c)
 {
-	int	count;
+	size_t count;
 
-	count = 0;
-	while (s[count] != '\0')
-	{
-		count++;
-	}
+	count = ft_strlen(s);
+	
     while (count >= 0)
     {
         if (s[count] == (char)c)

@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:19 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/08 22:01:55 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/08 22:35:05 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
         return(0);
 }
 
-int	main(void)
+/*int	main(void)
 {
     char str[20] = "Jessica Mezzavilla";
     char sub_string[5] = "ca";
@@ -48,4 +48,4 @@ int	main(void)
 
     printf("original: %s\n", new_str);
     printf("custom: %s\n", new_str_ft);
-}
+}*/
