@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:06 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/11 18:24:29 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/12 22:25:07 by vmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	count = 0;
 	while (n--)
 	{
-		if (p[count] == c)
+		if ((unsigned char)p[count] == (unsigned char)c)
 		{
 			return ((void *)(p + count));
 		}
@@ -29,16 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-/*int main()
-{
-    char str[] = "jessica";
-    char *ptr;
-    char *ptr2;
-
-    ptr = ft_memchr(str, 'i', ft_strlen(str));
-    printf("%s\n", ptr);
-
-    ptr2 = memchr(str, 'i', ft_strlen(str));
-    printf("%s", ptr2);
-}*/

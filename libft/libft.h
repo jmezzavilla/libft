@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:48:10 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/11 18:22:19 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/12 19:57:43 by vmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
+# include <unistd.h>
 
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
