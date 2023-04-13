@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:22 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/14 17:48:04 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/13 19:57:24 by vmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	count;
+	unsigned int	i;
+	char			*last_occurence;
 
-	count = ft_strlen(s);
-	if (c == '\0')
-		return ((char *) s + count);
-	while (count--)
+	last_occurence = NULL;
+	i = 0;
+	while (s[i])
 	{
-		if (s[count] == (char)c)
-		{
-			return ((char *)(s + count));
-		}
+		if (s[i] == (char)c)
+			last_occurence = (char *)&s[i];
+		i++;
 	}
-	return (NULL);
+	if ((char)c == s[i])
+		return ((char *)&s[i]);
+	return (last_occurence);
 }
-
-/*int	main(void)
-{
-	const char str[] = "teste";
-	const char target = '\0';
-
-	printf("%s", ft_strrchr(str, target));
-	printf("%s", strrchr(str, target));
-}*/
