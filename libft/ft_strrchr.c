@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:22 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/11 19:40:03 by vmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/14 17:48:04 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char *s, int c)
 
 	count = ft_strlen(s);
 	if (c == '\0')
-		return ((char *)(s + count));
+		return ((char *) s + count);
 	while (count--)
 	{
 		if (s[count] == (char)c)
@@ -31,7 +31,7 @@ char	*ft_strrchr(const char *s, int c)
 
 /*int	main(void)
 {
-	const char str[] = "Jasmim Jéssica.";
+	const char str[] = "teste";
 	const char target = '\0';
 
 	printf("%s", ft_strrchr(str, target));

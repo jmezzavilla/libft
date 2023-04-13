@@ -6,7 +6,13 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:51:44 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/11 17:59:21 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/12 20:00:37 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

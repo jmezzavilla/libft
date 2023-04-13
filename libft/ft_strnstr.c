@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:19 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/12 22:44:14 by vmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/13 23:13:33 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

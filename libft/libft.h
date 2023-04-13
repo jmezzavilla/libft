@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:48:10 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/12 19:57:43 by vmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/12 20:10:11 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,13 @@ int		ft_tolower(int c);
 //chapter two
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char    *ft_strtrim(char const *s1, char const *set);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+//char **ft_split(char const *s, char c);
+void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd);
+
+
 
 #endif

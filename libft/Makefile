@@ -29,6 +29,12 @@ FILES = ft_atoi\
 		ft_strrchr\
 		ft_tolower\
 		ft_toupper\
+		ft_substr\
+		ft_strjoin\
+		ft_strtrim\
+		ft_strmapi\
+		ft_putchar_fd\
+		ft_putstr_fd\
 
 SRCS_DIR = ./
 

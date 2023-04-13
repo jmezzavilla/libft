@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:06 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/12 22:25:07 by vmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/14 15:28:40 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
+
+/*int main()
+{
+	char str[] = "jessica";
+	char *result;
+
+	result = ft_memchr(str, 'i', 8);
+	printf("%s", result);
+}*/

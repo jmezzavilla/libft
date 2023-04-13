@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:54:21 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/11 19:20:06 by vmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/03/13 23:13:21 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

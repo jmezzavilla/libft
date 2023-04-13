@@ -6,7 +6,13 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:50:45 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/11 17:59:37 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/12 19:57:45 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*#include "libft.h"
+
+char **ft_split(char const *s, char c)
+{
+
+}*/
