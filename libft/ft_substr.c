@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:49:35 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/14 21:46:32 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/13 20:55:39 by vmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 
 	if (!s)
-		return (0);
+		return (NULL);
 	if (ft_strlen(s) < start)
-		len = 0;
+	{
+		str = malloc(1);
+		if (!str)
+			return (NULL);
+		str[0] = '\0';
+		return (str);
+	}
 	if (ft_strlen(s + start) < len)
 		len = ft_strlen(s + start);
-	str = malloc(sizeof(char) * len + 1);
+	str = ft_calloc((len + 1), sizeof(char));
 	if (!str)
-		return (0);
+		return (NULL);
 	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
@@ -34,7 +40,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
     char str[] = "jessica alves mezzavilla";
 
     char *result;
-    result = ft_substr(str, 8, 5);
+    result = ft_substr(str, 9, 2);
 
     printf("%s", result);
 }*/
