@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:49:35 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/14 17:18:16 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/14 21:46:32 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
     char str[] = "jessica alves mezzavilla";
 
     char *result;
-    result = ft_substr(str, 9, 2);
+    result = ft_substr(str, 8, 5);
 
     printf("%s", result);
 }*/
