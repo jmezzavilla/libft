@@ -15,6 +15,7 @@
 
 #include "libft.h"
 
+
 static int	unleah(char **str, int size)
 {
 	while (size--)
@@ -46,6 +47,7 @@ int	ft_aloc_memory(char **split, int word, size_t size)
 	{
 		return (unleah(split, word - 1));
 	}
+	return (0);
 }
 
 int	ft_write_words(char **split, char const *str, char c)
@@ -65,7 +67,8 @@ int	ft_write_words(char **split, char const *str, char c)
 			j = 0;
 			while ((str[i + j] == c || str[i + j] == '\0') == 0)
 				j++;
-			ft_aloc_memory(split, word, j + 1);
+			if (ft_aloc_memory(split, word, j + 1) != 0)
+				return (-1);
 			ft_strlcpy(split[word], str + i, j + 1);
 			i += j;
 			word++;
