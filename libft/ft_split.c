@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vmezzavilla <vmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jmezzavilla <jessicamezzavilla@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:50:45 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/13 23:36:59 by vmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/15 20:00:04 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_count_words(char const *s, char c)
 		}
 	}
 	return (words);
-}
+} 
 
 void	ft_write_words_splited(char **split, char const *str, char c)
 {
