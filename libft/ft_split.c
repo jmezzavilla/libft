@@ -60,7 +60,7 @@ int	ft_write_words(char **split, char const *str, char c)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if ((str[i] == c || str[i] == '\0') == 1)
+		if (str[i] == c || str[i] == '\0')
 			i++;
 		else
 		{
