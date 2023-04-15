@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:54:26 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/11 13:59:59 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/15 20:56:29 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 /*int	main(void)
 {
-    char src[] = "victor";
+    char src[] = "j";
     char dest[] = "jessica";
 
     ft_memmove(dest, src, ft_strlen(src) + 1);
