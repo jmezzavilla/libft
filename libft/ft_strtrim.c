@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:50:11 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/14 17:34:16 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/15 19:29:34 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 /*int	main(void)
 {
-	char *s1 = "   hello world   ";
+	char *s1 = "  jessica  ";
 	char *set = " ";
 	char *trimmed_str = ft_strtrim(s1, set);
-	if (trimmed_str == NULL)
-	{
-		printf("Erro: não foi possível alocar memória para a string resultante\n");
-		return (1);
-	}
 	printf("'%s' -> '%s'\n", s1, trimmed_str);
 	free(trimmed_str);
 }*/

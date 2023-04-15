@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:16 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/13 23:11:18 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/15 18:04:53 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,10 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)s1[count] - (unsigned char)s2[count]);
 }
+
+/*int main()
+{
+	int result;
+	result = ft_strncmp("Jessica", "jessica", 7);
+	printf("%d", result);
+}*/

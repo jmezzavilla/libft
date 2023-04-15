@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:54:17 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/11 18:23:15 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/15 19:28:02 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 /*int main()
 {
-    char src[] = "efgh";
-    char dest[] = "abc";
-    size_t i = ft_strlcat(dest,src,8);
+    char src[] = "Jessica";
+    char dest[30] = "meu nome é ";
+    size_t i = ft_strlcat(dest,src,20);
 
-    printf("%ld", i);
+    printf("%ld\n", i);
     printf("%s", dest);
 }*/

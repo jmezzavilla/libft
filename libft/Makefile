@@ -47,6 +47,7 @@ FILES = ft_atoi\
 		ft_strmapi\
 		ft_putchar_fd\
 		ft_putstr_fd\
+		ft_split\
 
 SRCS_DIR = ./
 

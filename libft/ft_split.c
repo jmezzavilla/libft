@@ -29,7 +29,7 @@ int	ft_count_words(char const *s, char c)
 	return (words);
 }
 
-void	ft_write_words_splited(char **split, char const *str, char c)
+void	ft_write_words(char **split, char const *str, char c)
 {
 	const char	*start;
 	const char	*p;
@@ -69,11 +69,11 @@ char	**ft_split(char const *s, char c)
 	res = (char **)ft_calloc(ft_count_words(s, c), sizeof(char *));
 	if (!res)
 		return (NULL);
-	ft_write_words_splited(res, s, c);
+	ft_write_words(res, s, c);
 	return (res);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char			**tab;
 	unsigned int	i;
@@ -88,4 +88,4 @@ int	main(void)
 		write(2,"\n",1);
 		i++;
 	}
-}
+}*/

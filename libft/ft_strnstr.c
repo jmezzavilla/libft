@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:19 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/14 21:47:05 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/15 09:44:22 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,4 +31,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-
+/*int main()
+{
+	char *result;
+	result = ft_strnstr("meu nome é jessica", "nom", 7);
+	printf("%s", result);
+}*/

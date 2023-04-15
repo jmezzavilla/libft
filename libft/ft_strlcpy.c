@@ -12,6 +12,8 @@
 
 #include "libft.h"
 
+
+
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t count;
@@ -30,3 +32,15 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
+
+/*int main()
+{
+	char src[8] = "Jessica";
+	char dest[8];
+	size_t size;
+
+	
+	size = 5;
+	ft_strlcpy(dest, src, size);
+	printf("%s", dest);
+}*/

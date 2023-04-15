@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:51:17 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/12 20:01:09 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/15 19:44:09 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	len = ft_strlen(s);
 	str = malloc(sizeof(char) * (len + 1));
-	if (str == NULL)
+	if (!str)
 		return (NULL);
 	i = 0;
 	while (s[i] != '\0')
@@ -31,3 +31,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
+/*char ft_uppercase(unsigned int i, char c)
+{
+	return ft_toupper(c);
+}
+
+int main()
+{
+	char *str;
+	str = ft_strmapi("jessica", ft_uppercase);
+	printf("%s", str);
+}*/
