@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jmezzavilla <jessicamezzavilla@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:59:01 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/11 18:22:39 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/16 21:22:17 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_atoi(const char *nptr)
 	return (result * sign);
 }
 
-/*+int main(void)
+/*int main(void)
 {
 	char *sa = " -11234ab567";
 
