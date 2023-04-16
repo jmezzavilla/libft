@@ -15,11 +15,10 @@
 
 #include "libft.h"
 
-
 static int	count_words(const char *str, char c)
 {
-	int i;
-	int trigger;
+	int		i;
+	int		trigger;
 
 	i = 0;
 	trigger = 0;
@@ -37,33 +36,40 @@ static int	count_words(const char *str, char c)
 	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_write_words(char **split, char const *s, char c)
 {
-	size_t i;
-	size_t j;
-	int begin;
-	char **split;
+	size_t	i;
+	size_t	j;
+	int		start;
 
-	split = ft_calloc((count_words(s, c) + 1), sizeof(char *));
-	if (!s || !split)
-		return (0);
 	i = 0;
 	j = 0;
-	begin = -1;
+	start = -1;
 	while (i <= ft_strlen(s))
 	{
-		if (s[i] != c && begin < 0)
-			begin = i;
-		else if ((s[i] == c || i == ft_strlen(s)) && begin >= 0)
+		if (s[i] != c && start < 0)
+			start = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && start >= 0)
 		{
-			split[j] = ft_calloc((i - begin + 1), sizeof(char));
-			ft_strlcpy(split[j], s + begin, i - begin + 1);
-			begin = -1;
+			split[j] = ft_calloc((i - start + 1), sizeof(char));
+			ft_strlcpy(split[j], s + start, i - start + 1);
+			start = -1;
 			j++;
 		}
 		i++;
 	}
 	split[j] = 0;
+	return (split);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**split;
+
+	split = ft_calloc((count_words(s, c) + 1), sizeof(char *));
+	if (!s || !split)
+		return (0);
+	ft_write_words(split, s, c);
 	return (split);
 }
 
@@ -73,7 +79,7 @@ char	**ft_split(char const *s, char c)
 	unsigned int i;
 
 	i = 0;
-	tab = ft_split("ola meu nome é jessica", ' ');
+	tab = ft_split("ola meu nome é", ' ');
 	if (!tab[0])
 		ft_putstr_fd("ok\n", 1);
 	while (tab[i] != NULL)

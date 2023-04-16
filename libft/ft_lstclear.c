@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jmezzavilla <jessicamezzavilla@gmail.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 23:22:58 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/15 23:57:14 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/16 20:47:09 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
