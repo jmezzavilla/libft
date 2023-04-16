@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 13:51:15 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/03/09 21:37:52 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/15 21:03:22 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,8 @@ void	*ft_memset(void *s, int c, size_t n)
 
 /*int main()
 {
-    char str[50] = "GeeksForGeeks is for programming geeks.";
-    printf("\nBefore memset(): %s\n", str);
+    char str[50] = "Jessica Alves Mezzavilla";
   
-    ft_memset(str + 13, '.', 8*sizeof(char));
-  
-    printf("After memset():  %s", str);
-    return (0);
+    ft_memset(str + 24, '!', 8*sizeof(char));
+    printf("%s", str);
 }*/

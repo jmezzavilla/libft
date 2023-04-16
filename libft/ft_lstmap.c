@@ -1,40 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 13:59:06 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/15 20:23:28 by jmezzavilla      ###   ########.fr       */
+/*   Created: 2023/04/15 23:23:19 by jmezzavilla       #+#    #+#             */
+/*   Updated: 2023/04/16 00:04:34 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	const unsigned char	*p;
-	size_t				count;
+	t_list	*new_list;
+	t_list	*current;
 
-	p = s;
-	count = 0;
-	while (n--)
+	if (!lst)
+		return (NULL);
+	new_list = NULL;
+	while (lst)
 	{
-		if ((unsigned char)p[count] == (unsigned char)c)
+		current = ft_lstnew(f(lst->content));
+		if (!current)
 		{
-			return ((void *)(p + count));
+			ft_lstclear(&new_list, del);
+			return (NULL);
 		}
-		count++;
-	}
-	return (0);
+		ft_lstadd_back(&new_list, current);
+		lst = lst->next;
+	}	
+	return (new_list);
 }
-
-/*int main()
-{
-	char str[] = "jessica";
-	char *result;
-
-	result = ft_memchr(str, 'i', 8);
-	printf("%s", result);
-}*/
