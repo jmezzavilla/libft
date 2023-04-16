@@ -3,7 +3,8 @@
 		"string.h": "c",
 		"stdio.h": "c",
 		"unistd.h": "c",
-		"libft.h": "c"
+		"libft.h": "c",
+		"stdlib.h": "c"
 	},
     "codam-norminette-3.command": "norminette", // command that the highlighter executes to get the norm errors
 	"codam-norminette-3.fileregex": "\\.[ch]$", // regex that matches the files you want to norm check
