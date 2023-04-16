@@ -49,12 +49,17 @@ FILES = ft_atoi\
 		ft_putstr_fd\
 		ft_split\
 
-SRCS_DIR = ./
+FILES_B = ft_lstnew\
 
+SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
+
+SRCS_B = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES_B)))
 
 OBJS_DIR = ./
 OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
+
+OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
 .c.o: $(SRCS)
 	$(CC) $(CFLAGS) -c -o $@ $<
@@ -72,4 +77,7 @@ fclean: clean
 
 re: clean all
 
+bonus: $(SRCO_B)
+		$(CME) $(NAME) $(SRCO_B)
+		
 .PHONY: all clean fclean re
