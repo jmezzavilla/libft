@@ -23,54 +23,51 @@ static int	unleah(char **str, int size)
 	return (-1);
 }
 
-int	ft_count_words(char const *str, char c)
+int	ft_total_words(char const *s, char c)
 {
-	int i;
 	int words;
 
 	words = 0;
-	i = 0;
-	while (str[i] != '\0')
+	while (*s)
 	{
-		if ((str[i + 1] == c || str[i + 1] == '\0') == 1 && (str[i] == c
-				|| str[i] == '\0') == 0)
+		if ((*s == c || *s + 1 == '\0') && (*s == c || *s == '\0'))
 			words++;
-		i++;
+		s++;
 	}
 	return (words);
 }
 
-int	ft_aloc_memory(char **split, int word, size_t size)
-{
-	split[word] = (char *)ft_calloc(size, sizeof(char));
-	if (!split[word])
-	{
-		return (unleah(split, word - 1));
-	}
-	return (0);
-}
-
 int	ft_write_words(char **split, char const *str, char c)
 {
-	int i;
-	int j;
+	const char *start;
+	const char *p;
 	int word;
+	int len;
 
+	start = str;
 	word = 0;
-	i = 0;
-	while (str[i] != '\0')
+	while (*str)
 	{
-		if ((str[i] == c || str[i] == '\0') == 1)
-			i++;
+		if ((*str == c || *str == '\0'))
+		{
+			str++;
+			start = str;
+		}
 		else
 		{
-			j = 0;
-			while ((str[i + j] == c || str[i + j] == '\0') == 0)
-				j++;
-			if (ft_aloc_memory(split, word, j + 1) != 0)
-				return (-1);
-			ft_strlcpy(split[word], str + i, j + 1);
-			i += j;
+			p = start;
+			while (*p != '\0' && *p != c)
+			{
+				p++;
+			}
+			len = p - start;
+			split[word] = (char *)ft_calloc(len + 1, sizeof(char));
+			if (!split[word])
+			{
+				return (unleah(split, word - 1));
+			}
+			ft_strlcpy(split[word], start, len + 1);
+			str = p;
 			word++;
 		}
 	}
@@ -80,8 +77,11 @@ int	ft_write_words(char **split, char const *str, char c)
 char	**ft_split(char const *s, char c)
 {
 	char **res;
+	int words;
 
-	res = (char **)ft_calloc(ft_count_words(s, c) + 1, sizeof(char *));
+	words = ft_total_words(s, c);
+
+	res = (char **)ft_calloc(words + 1, sizeof(char *));
 	if (!res)
 		return (NULL);
 	if (ft_write_words(res, s, c) != 0)
@@ -91,7 +91,7 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	char **tab;
 	unsigned int i;
@@ -106,4 +106,4 @@ char	**ft_split(char const *s, char c)
 		write(2, "\n", 1);
 		i++;
 	}
-}*/
+}
