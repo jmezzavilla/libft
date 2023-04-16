@@ -53,7 +53,6 @@ FILES = ft_memset \
 		ft_putnbr_fd \
 		ft_strtok \
 		ft_strcmp \
-		get_next_line \
 
 FILES_B = 	ft_lstnew \
 	  		ft_lstadd_front \
