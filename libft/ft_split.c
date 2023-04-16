@@ -16,88 +16,64 @@
 #include "libft.h"
 
 
-static int	unleah(char **str, int size)
+static int	count_words(const char *str, char c)
 {
-	while (size--)
-		free(str[size]);
-	return (-1);
-}
+	int i;
+	int trigger;
 
-int	ft_total_words(char const *s, char c)
-{
-	int words;
-
-	words = 0;
-	while (*s)
-	{
-		if ((*s == c || *s + 1 == '\0') && (*s == c || *s == '\0'))
-			words++;
-		s++;
-	}
-	return (words);
-}
-
-int	ft_write_words(char **split, char const *str, char c)
-{
-	const char *start;
-	const char *p;
-	int word;
-	int len;
-
-	start = str;
-	word = 0;
+	i = 0;
+	trigger = 0;
 	while (*str)
 	{
-		if ((*str == c || *str == '\0'))
+		if (*str != c && trigger == 0)
 		{
-			str++;
-			start = str;
+			trigger = 1;
+			i++;
 		}
-		else
-		{
-			p = start;
-			while (*p != '\0' && *p != c)
-			{
-				p++;
-			}
-			len = p - start;
-			split[word] = (char *)ft_calloc(len + 1, sizeof(char));
-			if (!split[word])
-			{
-				return (unleah(split, word - 1));
-			}
-			ft_strlcpy(split[word], start, len + 1);
-			str = p;
-			word++;
-		}
+		else if (*str == c)
+			trigger = 0;
+		str++;
 	}
-	return (0);
+	return (i);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char **res;
-	int words;
+	size_t i;
+	size_t j;
+	int begin;
+	char **split;
 
-	words = ft_total_words(s, c);
-
-	res = (char **)ft_calloc(words + 1, sizeof(char *));
-	if (!res)
-		return (NULL);
-	if (ft_write_words(res, s, c) != 0)
+	split = ft_calloc((count_words(s, c) + 1), sizeof(char *));
+	if (!s || !split)
+		return (0);
+	i = 0;
+	j = 0;
+	begin = -1;
+	while (i <= ft_strlen(s))
 	{
-		return (NULL);
+		if (s[i] != c && begin < 0)
+			begin = i;
+		else if ((s[i] == c || i == ft_strlen(s)) && begin >= 0)
+		{
+			split[j] = ft_calloc((i - begin + 1), sizeof(char));
+			ft_strlcpy(split[j], s + begin, i - begin + 1);
+			begin = -1;
+			j++;
+		}
+		i++;
 	}
-	return (res);
+	split[j] = 0;
+	return (split);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char **tab;
 	unsigned int i;
 
 	i = 0;
-	tab = ft_split("ola meu nome e jessica", ' ');
+	tab = ft_split("ola meu nome é jessica", ' ');
 	if (!tab[0])
 		ft_putstr_fd("ok\n", 1);
 	while (tab[i] != NULL)
@@ -107,3 +83,4 @@ int	main(void)
 		i++;
 	}
 }
+*/
