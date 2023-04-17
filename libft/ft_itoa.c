@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:51:05 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/17 11:22:25 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/17 20:56:19 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	*ft_itoa(int n)
 
 /*int	main(void)
 {
-	int n = 0;
+	int n = -12345;
 	char *str = ft_itoa(n);
 	printf("O número %d em string é: %s\n", n, str);
 	free(str);
