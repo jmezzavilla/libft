@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jessicamezzavilla@gmail.co    +#+  +:+       +#+        */
+/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:51:05 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/16 22:39:48 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/17 11:22:25 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char	*ft_itoa(int n)
 	str = ft_calloc(size + 1, sizeof(char));
 	if (!str)
 		return (0);
-	str[size--] = 0;
+	str[size--] = '\0';
 	ft_write_str(str, nb, size);
 	return (str);
 }
