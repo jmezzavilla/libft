@@ -52,6 +52,7 @@ FILES = ft_atoi\
 		ft_putnbr_fd\
 		ft_putnbr_fd\
 		ft_putendl_fd\
+		ft_striteri\
 
 
 FILES_B = 	ft_lstnew \

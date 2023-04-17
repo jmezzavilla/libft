@@ -37,10 +37,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 /*int main()
 {
-    char str[] = "jessica alves mezzavilla";
+    char str[] = "jessica";
 
     char *result;
-    result = ft_substr(str, 9, 2);
+    result = ft_substr(str, 2, 3);
 
     printf("%s", result);
 }*/

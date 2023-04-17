@@ -17,8 +17,8 @@
 
 static int	count_words(const char *str, char c)
 {
-	int		i;
-	int		trigger;
+	int	i;
+	int	trigger;
 
 	i = 0;
 	trigger = 0;
@@ -34,6 +34,18 @@ static int	count_words(const char *str, char c)
 		str++;
 	}
 	return (i);
+}
+
+static char	**ft_cleanup_split(char **split, size_t j)
+{
+	size_t	idx;
+
+	split[j] = NULL;
+	idx = 0;
+	while (split[idx])
+		free(split[idx++]);
+	free(split);
+	return (NULL);
 }
 
 char	**ft_write_words(char **split, char const *s, char c)
@@ -52,6 +64,8 @@ char	**ft_write_words(char **split, char const *s, char c)
 		else if ((s[i] == c || i == ft_strlen(s)) && start >= 0)
 		{
 			split[j] = ft_calloc((i - start + 1), sizeof(char));
+			if (!split[j])
+				return (ft_cleanup_split(split, j));
 			ft_strlcpy(split[j], s + start, i - start + 1);
 			start = -1;
 			j++;
@@ -69,8 +83,7 @@ char	**ft_split(char const *s, char c)
 	split = ft_calloc((count_words(s, c) + 1), sizeof(char *));
 	if (!s || !split)
 		return (0);
-	ft_write_words(split, s, c);
-	return (split);
+	return (ft_write_words(split, s, c));
 }
 
 /*int	main(void)

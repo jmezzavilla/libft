@@ -6,7 +6,7 @@
 /*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 17:51:44 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/15 19:54:57 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/04/17 20:34:17 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (fd <= 0)
+		return ;
 	write(fd, &c, 1);
 }
