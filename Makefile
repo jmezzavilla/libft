@@ -64,7 +64,7 @@ SRCS = \
    utils/ft_isascii.c\
    utils/ft_isdigit.c\
    utils/ft_isprint.c\
-
+   utils/get_next_line_utils.c\
 
 OBJS = $(SRCS:.c=.o)
 

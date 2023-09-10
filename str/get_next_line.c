@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jessicamezzavilla@gmail.co    +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 18:37:28 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/07/29 14:23:26 by jmezzavilla      ###   ########.fr       */
+/*   Updated: 2023/09/10 15:32:09 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	line = ft_strjoin(0, buffer);
+	line = ft_strjoin_gnl(0, buffer);
 	if (ft_check_newline(buffer))
 		return (line);
 	bytes = read(fd, buffer, BUFFER_SIZE);
@@ -51,7 +51,7 @@ char	*get_next_line(int fd)
 	}
 	while (bytes)
 	{
-		line = ft_strjoin(line, buffer);
+		line = ft_strjoin_gnl(line, buffer);
 		if (ft_check_newline(buffer))
 			break ;
 		bytes = read(fd, buffer, BUFFER_SIZE);
