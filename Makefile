@@ -51,6 +51,7 @@ SRCS = \
    str/ft_strlcpy.c\
    str/ft_strmapi.c\
    str/ft_strnstr.c\
+   str/ft_strcmp.c\
    str/ft_strncmp.c\
    str/ft_strrchr.c\
    str/ft_strtrim.c\
