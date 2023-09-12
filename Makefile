@@ -67,12 +67,15 @@ SRCS = \
    utils/ft_isprint.c\
    utils/get_next_line_utils.c\
 
+
+INCLUDES = include
+
 OBJS = $(SRCS:.c=.o)
 
 CC= gcc
 RM= rm -f
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -I $(INCLUDES) -Wextra -Werror
 
 .c.o: 
 	$(CC) $(CFLAGS) -g -c $< -o ${<:.c=.o}
