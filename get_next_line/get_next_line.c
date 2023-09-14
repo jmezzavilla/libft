@@ -3,34 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/12 18:37:28 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/09/10 15:32:09 by jealves-         ###   ########.fr       */
+/*   Created: 2023/05/10 10:49:38 by jmezzavilla       #+#    #+#             */
+/*   Updated: 2023/05/12 23:36:28 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_check_newline(char *s)
-{
-	size_t	i;
-	size_t	j;
-	int		isnl;
-
-	i = 0;
-	j = 0;
-	isnl = 0;
-	while (s[i])
-	{
-		if (isnl)
-			s[j++] = s[i];
-		if (s[i] == '\n')
-			isnl = 1;
-		s[i++] = '\0';
-	}
-	return (isnl);
-}
+#include "get_next_line.h"
 
 char	*get_next_line(int fd)
 {

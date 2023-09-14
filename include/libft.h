@@ -15,6 +15,8 @@
 
 # define BUFFER_SIZE 512
 
+# include "ft_printf.h"
+# include "get_next_line.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>

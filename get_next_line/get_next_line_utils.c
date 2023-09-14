@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 15:27:53 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/10 15:38:53 by jealves-         ###   ########.fr       */
+/*   Created: 2023/05/10 20:58:39 by jmezzavilla       #+#    #+#             */
+/*   Updated: 2023/05/12 23:36:22 by jmezzavilla      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_next_line.h"
 
 size_t	ft_strlen_gnl(const char *s)
 {
@@ -64,7 +64,7 @@ char	*ft_strjoin_gnl(char *dest, char *src)
 	return (str);
 }
 
-int	ft_check_newline_gnl(char *s)
+int	ft_check_newline(char *s)
 {
 	size_t	i;
 	size_t	j;

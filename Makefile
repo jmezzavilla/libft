@@ -58,14 +58,21 @@ SRCS = \
    str/ft_substr.c\
    str/ft_tolower.c\
    str/ft_toupper.c\
-   str/get_next_line.c\
    \
    utils/ft_isalnum.c\
    utils/ft_isalpha.c\
    utils/ft_isascii.c\
    utils/ft_isdigit.c\
    utils/ft_isprint.c\
-   utils/get_next_line_utils.c\
+   \
+   ft_printf/ft_printf.c\
+   ft_printf/ft_putchar.c\
+   ft_printf/ft_putnbr_base.c\
+   ft_printf/ft_putpointer.c\
+   ft_printf/ft_putstr.c\
+   \
+   get_next_line/get_next_line_utils.c\
+   get_next_line/get_next_line.c\
 
 
 INCLUDES = include
