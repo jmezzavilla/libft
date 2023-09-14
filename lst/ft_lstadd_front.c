@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/15 23:21:27 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/07/07 22:18:34 by jmezzavilla      ###   ########.fr       */
+/*   Created: 2023/09/14 22:29:58 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:30:03 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/15 23:22:33 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/07/07 22:18:34 by jmezzavilla      ###   ########.fr       */
+/*   Created: 2023/09/14 22:30:25 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:30:28 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

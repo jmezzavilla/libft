@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/15 23:22:58 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/07/07 22:18:34 by jmezzavilla      ###   ########.fr       */
+/*   Created: 2023/09/14 22:30:15 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:30:19 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/10 10:49:38 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/05/12 23:36:28 by jmezzavilla      ###   ########.fr       */
+/*   Created: 2023/09/14 22:29:01 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:29:02 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

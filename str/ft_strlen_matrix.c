@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen_matrix.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jessicamezzavilla@gmail.co    +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/07 13:50:56 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/07/29 20:55:03 by jmezzavilla      ###   ########.fr       */
+/*   Created: 2023/09/14 22:36:29 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:36:33 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

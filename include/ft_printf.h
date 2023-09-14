@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jessicamezzavilla@gmail.co    +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/19 21:59:48 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/23 17:36:00 by jmezzavilla      ###   ########.fr       */
+/*   Created: 2023/09/14 22:29:28 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:29:30 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

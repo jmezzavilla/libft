@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jmezzavilla@student.42.fr>    +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/11 17:52:27 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/07/07 22:18:34 by jmezzavilla      ###   ########.fr       */
+/*   Created: 2023/09/14 22:27:55 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:27:58 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

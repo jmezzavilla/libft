@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jessicamezzavilla@gmail.co    +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/23 16:09:51 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/23 17:35:56 by jmezzavilla      ###   ########.fr       */
+/*   Created: 2023/09/14 22:28:35 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:28:37 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

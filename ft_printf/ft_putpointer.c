@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putpointer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmezzavilla <jessicamezzavilla@gmail.co    +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/20 22:43:56 by jmezzavilla       #+#    #+#             */
-/*   Updated: 2023/04/23 17:35:54 by jmezzavilla      ###   ########.fr       */
+/*   Created: 2023/09/14 22:28:41 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:28:43 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
