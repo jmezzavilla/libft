@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_strlen(char *c)
+int	ft_strlen_pf(char *c)
 {
 	int	count;
 
@@ -41,7 +41,7 @@ int	ft_putnbr_base_us(unsigned long int n, char *base)
 	int		count;
 	size_t	size_base;
 
-	size_base = ft_strlen(base);
+	size_base = ft_strlen_pf(base);
 	count = 0;
 	if (n >= size_base)
 	{
