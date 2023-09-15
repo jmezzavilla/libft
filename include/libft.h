@@ -45,7 +45,6 @@ char				*ft_strnstr(const char *big, const char *little,
 char				*get_next_line(int fd);
 int					ft_check_newline_gnl(char *s);
 
-
 int					ft_atoi(const char *nptr);
 void				ft_bzero(void *s, size_t n);
 
