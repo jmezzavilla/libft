@@ -33,7 +33,7 @@ static int	count_words(const char *str, char c)
 	return (i);
 }
 
-static char	**ft_cleanup_split(char **split, size_t j)
+char	**ft_cleanup_split(char **split, size_t j)
 {
 	size_t	idx;
 
