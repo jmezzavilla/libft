@@ -77,18 +77,22 @@ SRCS = \
 
 INCLUDES = include
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(patsubst %.c,%.o,$(SRCS))
 
 CC= gcc
 RM= rm -f
 
+PROJECT = <$(GREEN)$(NAME)$(RESET)>
+
 CFLAGS = -Wall -I $(INCLUDES) -Wextra -Werror
 
-.c.o: 
-	$(CC) $(CFLAGS) -g -c $< -o ${<:.c=.o}
+%.o: %.c
+	@printf "$(PROJECT) compiling $(BLUE)$<$(RESET)\n"
+	@$(CC) $(CFLAGS) -c $< -o $@   
 
-$(NAME): $(OBJS)
-				ar rcs $(NAME) $(OBJS)
+$(NAME): $(OBJS)          
+		@ar -rcs $(NAME) $(OBJS)
+	   @printf "$(PROJECT) $(RED)compiled$(RESET)!\n"
 
 
 all:	$(NAME)
@@ -100,3 +104,13 @@ fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
+
+### COLORS ###
+
+RED = \033[0;31m
+GREEN = \033[0;92m
+YELLOW = \033[93m
+BLUE = \033[0;34m
+MAGENTA = \033[0;35m
+CYAN = \033[96m
+RESET = \033[0m
