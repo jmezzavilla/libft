@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 12:03:59 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/21 22:43:05 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/22 19:57:10 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_list
 }					t_list;
 
 size_t				ft_strlen(const char *str);
-size_t				ft_strlen_gnl(const char *str);
+size_t				ft_strlen_nl(const char *s);
 size_t				ft_strlen_matrix(char **str);
 size_t				ft_strlcat(char *dest, const char *src, size_t size);
 void				ft_strcat_gnl(char *dest, char *src);
