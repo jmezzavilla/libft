@@ -38,6 +38,7 @@ SRCS = \
    mem/ft_memmove.c\
    mem/ft_memcpy.c\
    mem/ft_memset.c\
+   mem/ft_swap_mem.c\
    \
    nbr/ft_atoi.c\
    nbr/ft_itoa.c\

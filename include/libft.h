@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 12:03:59 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/23 16:44:05 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/23 17:28:45 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ void				ft_lstdelfirst(t_list **lst);
 void				ft_lstdellast(t_list **lst);
 
 char				**ft_cleanup_split(char **split, size_t j);
-void				ft_swap(int *a, int *b);
+void				ft_swap(int *a, int *);
+void				*ft_swap_mem(void *a, void *b, size_t size);
 
 #endif

@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_swap_mem.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 22:29:52 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/23 17:01:28 by jealves-         ###   ########.fr       */
+/*   Created: 2023/09/20 13:05:24 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/23 17:26:20 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void *ft_swap_mem(void *a, void *b, size_t size)
 {
-	t_list	*last;
-
-	if (!*lst)
-		*lst = new;
-	else
-	{
-		last = ft_lstlast(*lst);
-		last->next = new;
-	}
+    void *tmp = malloc(size); 
+    if (tmp == NULL)
+        return (NULL);
+    ft_memcpy(tmp, a, size);
+    ft_memcpy(a, b, size);
+    ft_memcpy(b, tmp, size);
+    free(tmp);
+    return (a);
 }
