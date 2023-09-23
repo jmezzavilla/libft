@@ -28,6 +28,8 @@ SRCS = \
    lst/ft_lstmap.c\
    lst/ft_lstnew.c\
    lst/ft_lstsize.c\
+   lst/ft_lstdelfirst.c\
+   lst/ft_lstdellast.c\
    \
    mem/ft_bzero.c\
    mem/ft_calloc.c\
@@ -64,6 +66,7 @@ SRCS = \
    utils/ft_isascii.c\
    utils/ft_isdigit.c\
    utils/ft_isprint.c\
+   utils/ft_swap.c\
    \
    ft_printf/ft_printf.c\
    ft_printf/ft_putchar.c\
