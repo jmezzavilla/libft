@@ -87,7 +87,7 @@ RM= rm -f
 
 PROJECT = <$(GREEN)$(NAME)$(RESET)>
 
-CFLAGS = -Wall -I $(INCLUDES) -Wextra -Werror
+CFLAGS = -Wall -I $(INCLUDES) -Wextra -Werror -g #-fsanitize=address
 
 %.o: %.c
 	@printf "$(PROJECT) compiling $(BLUE)$<$(RESET)\n"
