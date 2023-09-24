@@ -30,6 +30,7 @@ SRCS = \
    lst/ft_lstsize.c\
    lst/ft_lstdelfirst.c\
    lst/ft_lstdellast.c\
+   lst/ft_lstIdx.c\
    \
    mem/ft_bzero.c\
    mem/ft_calloc.c\
