@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 12:03:59 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/23 17:28:45 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/26 15:27:21 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+int					ft_ispositive(char *str);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 
@@ -91,12 +92,12 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-					void (*del)(void *));
+						void (*del)(void *));
 void				ft_lstdelfirst(t_list **lst);
 void				ft_lstdellast(t_list **lst);
 
 char				**ft_cleanup_split(char **split, size_t j);
-void				ft_swap(int *a, int *);
+void				ft_swap(int *a, int *b);
 void				*ft_swap_mem(void *a, void *b, size_t size);
 
 #endif

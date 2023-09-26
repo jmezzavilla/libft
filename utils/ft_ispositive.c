@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdellast.c                                    :+:      :+:    :+:   */
+/*   ft_ispositive.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 21:11:12 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/26 15:26:24 by jealves-         ###   ########.fr       */
+/*   Created: 2023/09/25 22:43:16 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/26 15:26:46 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdellast(t_list **lst)
+int	ft_ispositive(char *str)
 {
-	t_list	*current;
+	int	i;
+	int	isneg;
 
-	current = ft_lstlast(*lst);
-	free(current->next);
-	current->next = NULL;
+	i = 0;
+	isneg = 0;
+	if (str[i] == '-')
+		isneg = 1;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i])
+	{
+		if (!ft_isdigit(str[i]))
+			return (0);
+		i++;
+	}
+	if (isneg)
+		return (0);
+	return (1);
 }

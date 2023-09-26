@@ -6,17 +6,17 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:05:24 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/23 17:29:22 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/26 15:26:38 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_swap(int *a, int *b)
+void	ft_swap(int *a, int *b)
 {
-    int tmp;
-    
-    tmp = *b;
-    *b = *a;
-    *a = tmp;
+	int	tmp;
+
+	tmp = *b;
+	*b = *a;
+	*a = tmp;
 }
