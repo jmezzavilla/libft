@@ -42,6 +42,7 @@ SRCS = \
    mem/ft_swap_mem.c\
    \
    nbr/ft_atoi.c\
+   nbr/ft_atoi_long.c\
    nbr/ft_itoa.c\
    \
    str/ft_split.c\
@@ -98,7 +99,7 @@ CFLAGS = -Wall -I $(INCLUDES) -Wextra -Werror -g #-fsanitize=address
 
 $(NAME): $(OBJS)          
 		@ar -rcs $(NAME) $(OBJS)
-	   @printf "$(PROJECT) $(RED)compiled$(RESET)!\n"
+	   @printf "$(PROJECT) $(GREEN)compiled$(RESET)!\n"
 
 
 all:	$(NAME)
