@@ -87,7 +87,7 @@ INCLUDES = include
 OBJS = $(patsubst %.c,%.o,$(SRCS))
 
 CC= gcc
-RM= rm -f
+RM= @rm -f
 
 PROJECT = <$(GREEN)$(NAME)$(RESET)>
 
@@ -104,11 +104,15 @@ $(NAME): $(OBJS)
 
 all:	$(NAME)
 
-clean:
+clean :
 	$(RM) $(OBJS)
+	@for file in $(OBJS); do \
+        echo "$(PROJECT) deleting $(YELLOW) $$file $(RESET)!"; \
+    done
 
-fclean: clean
+fclean : clean
 	$(RM) $(NAME)
+	@printf "$(PROJECT) $(YELLOW) deleting $(NAME) $(RESET)!\n"
 
 re: fclean all
 
