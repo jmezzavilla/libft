@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 22:34:14 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/14 22:34:30 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/10/05 00:05:54 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,13 @@ int	ft_atoi(const char *nptr)
 		i++;
 	while (nptr[i] != '\0' && nptr[i] >= '0' && nptr[i] <= '9')
 	{
+		if ((result > INT_MAX / 10) || 
+            (result == INT_MAX / 10 && (nptr[i] - '0') > (INT_MAX % 10))) {
+            if(sign == -1)
+				return (INT_MIN);
+			else
+            	return (INT_MAX);
+        }
 		result = (result * 10) + (nptr[i] - '0');
 		i++;
 	}

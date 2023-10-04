@@ -70,7 +70,7 @@ SRCS = \
    utils/ft_isdigit.c\
    utils/ft_isprint.c\
    utils/ft_swap.c\
-   utils/ft_ispositive.c\
+   utils/ft_isnumber.c\
    \
    ft_printf/ft_printf.c\
    ft_printf/ft_putchar.c\

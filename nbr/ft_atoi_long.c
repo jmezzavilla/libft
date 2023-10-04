@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi _long.c                                    :+:      :+:    :+:   */
+/*   ft_atoi_long.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 22:34:14 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 15:45:25 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/10/05 00:05:50 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,13 @@ long	ft_atoi_long(const char *nptr)
 		i++;
 	while (nptr[i] != '\0' && nptr[i] >= '0' && nptr[i] <= '9')
 	{
+		if ((result > LONG_MAX / 10) || 
+            (result == LONG_MAX / 10 && (nptr[i] - '0') > (LONG_MAX % 10))) {
+			if(sign == -1)
+				return (LONG_MIN);
+			else
+            	return (LONG_MAX);
+        }
 		result = (result * 10) + (nptr[i] - '0');
 		i++;
 	}
