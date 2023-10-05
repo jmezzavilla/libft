@@ -111,7 +111,7 @@ clean :
         echo "$(PROJECT) deleting $(YELLOW) $$file $(RESET)!"; \
     done
 
-fclean : clean
+fclean :
 	$(RM) $(NAME)
 	@printf "$(PROJECT) $(YELLOW) deleting $(NAME) $(RESET)!\n"
 
