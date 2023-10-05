@@ -42,7 +42,8 @@ SRCS = \
    mem/ft_swap_mem.c\
    \
    nbr/ft_atoi.c\
-   nbr/ft_atoi_long.c\
+   nbr/ft_atol.c\
+   nbr/ft_atoll.c\
    nbr/ft_itoa.c\
    \
    str/ft_split.c\

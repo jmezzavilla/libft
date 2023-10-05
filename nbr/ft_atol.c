@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_long.c                                     :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 22:34:14 by jealves-          #+#    #+#             */
-/*   Updated: 2023/10/05 00:16:32 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/10/05 15:05:59 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	ft_result_atoi_long(const char *nptr, int sign, int i)
+long	ft_result_atol(const char *nptr, int sign, int i)
 {
 	long	result;
 
@@ -33,7 +33,7 @@ long	ft_result_atoi_long(const char *nptr, int sign, int i)
 	return (result * sign);
 }
 
-long	ft_atoi_long(const char *nptr)
+long	ft_atol(const char *nptr)
 {
 	long	i;
 	long	sign;
@@ -49,7 +49,7 @@ long	ft_atoi_long(const char *nptr)
 	}
 	else if (nptr[i] == '+')
 		i++;
-	return (ft_result_atoi_long(nptr, sign, i));
+	return (ft_result_atol(nptr, sign, i));
 }
 
 /*int main(void)

@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/16 12:03:59 by jealves-          #+#    #+#             */
-/*   Updated: 2023/10/04 23:53:36 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/10/05 15:06:22 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ char				*get_next_line(int fd);
 int					ft_check_newline_gnl(char *s);
 
 int					ft_atoi(const char *nptr);
-long				ft_atoi_long(const char *nptr);
+long				ft_atol(const char *nptr);
+long long			ft_atoll(const char *nptr);
 void				ft_bzero(void *s, size_t n);
 
 char				*ft_strdup(const char *s);
