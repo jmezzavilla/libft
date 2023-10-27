@@ -101,6 +101,7 @@ CFLAGS = -Wall -I $(INCLUDES) -Wextra -Werror -g #-fsanitize=address
 $(NAME): $(OBJS)          
 		@ar -rcs $(NAME) $(OBJS)
 	   @printf "$(PROJECT) $(GREEN)compiled$(RESET)!\n"
+	@make clean 
 
 
 all:	$(NAME)
