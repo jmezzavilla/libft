@@ -12,6 +12,10 @@
 
 NAME = libft.a
 
+PROJECT = libft
+
+SRCDIR	= srcs
+OBJDIR	= objs
 
 SRCS = \
    file/ft_putstr_fd.c\
@@ -34,18 +38,22 @@ SRCS = \
    \
    mem/ft_bzero.c\
    mem/ft_calloc.c\
+   mem/ft_realloc.c\
    mem/ft_memchr.c\
    mem/ft_memcmp.c\
    mem/ft_memmove.c\
    mem/ft_memcpy.c\
+   mem/ft_memcat.c\
    mem/ft_memset.c\
    mem/ft_swap_mem.c\
+   mem/ft_memcat.c\
    \
    nbr/ft_atoi.c\
    nbr/ft_atol.c\
    nbr/ft_atoll.c\
    nbr/ft_itoa.c\
    \
+   str/ft_split_without.c\
    str/ft_split.c\
    str/ft_strchr.c\
    str/ft_strdup.c\
@@ -53,7 +61,6 @@ SRCS = \
    str/ft_striteri.c\
    str/ft_strlcat.c\
    str/ft_strlen.c\
-   str/ft_strlen_matrix.c\
    str/ft_strlcpy.c\
    str/ft_strmapi.c\
    str/ft_strnstr.c\
@@ -64,6 +71,7 @@ SRCS = \
    str/ft_substr.c\
    str/ft_tolower.c\
    str/ft_toupper.c\
+   str/ft_strrep.c\
    \
    utils/ft_isalnum.c\
    utils/ft_isalpha.c\
@@ -74,47 +82,47 @@ SRCS = \
    utils/ft_isnumber.c\
    \
    ft_printf/ft_printf.c\
-   ft_printf/ft_putchar.c\
-   ft_printf/ft_putnbr_base.c\
-   ft_printf/ft_putpointer.c\
-   ft_printf/ft_putstr.c\
+   ft_printf/ft_printf_utils.c\
    \
-   get_next_line/get_next_line_utils.c\
-   get_next_line/get_next_line.c\
-
+   ft_dprintf/ft_dprintf.c\
+   ft_dprintf/ft_dprintf_utils.c\
+   \
+   get_next_line/get_next_line_bonus.c\
 
 INCLUDES = include
 
-OBJS = $(patsubst %.c,%.o,$(SRCS))
+SRCS		:= $(addprefix srcs/,$(SRCS))
+
+OBJS = $(patsubst $(SRCDIR)/%.c, $(OBJDIR)/%.o, $(SRCS))
 
 CC= gcc
 RM= @rm -f
 
-PROJECT = <$(GREEN)$(NAME)$(RESET)>
-
-CFLAGS = -Wall -I $(INCLUDES) -Wextra -Werror -g #-fsanitize=address
+CFLAGS = -I $(INCLUDES) -Wall -Wextra -Werror -g #-fsanitize=address
 
 %.o: %.c
-	@printf "$(PROJECT) compiling $(BLUE)$<$(RESET)\n"
 	@$(CC) $(CFLAGS) -c $< -o $@   
 
-$(NAME): $(OBJS)          
+$(NAME): $(OBJS)         
 	@ar -rcs $(NAME) $(OBJS)
-	@printf "$(PROJECT) $(GREEN)compiled$(RESET)!\n"
-	
+	@printf "\n$(BLUE)$(PROJECT)$(END) $(GREEN)Stuff compiled 🛠️\n$(END)"
 
+$(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR) $(LIB)
+	@mkdir -p $(@D)
+	@cc $(CFLAGS) -c $< -o $@
+
+$(OBJDIR):
+	@mkdir -p $(OBJDIR)
 
 all:	$(NAME)
 
 clean :
-	$(RM) $(OBJS)
-	@for file in $(OBJS); do \
-        echo "$(PROJECT) deleting $(YELLOW) $$file $(RESET)!"; \
-    done
+	$(RM) $(OBJDIR)/*.o
 
 fclean :
 	$(RM) $(NAME)
-	@printf "$(PROJECT) $(YELLOW) deleting $(NAME) $(RESET)!\n"
+	@$(RM)r objs
+	@printf "\n$(BLUE)$(PROJECT)$(END) $(GREEN)All stuff removed 🗑️\n$(END)"
 
 re: fclean all
 
@@ -126,4 +134,4 @@ YELLOW = \033[93m
 BLUE = \033[0;34m
 MAGENTA = \033[0;35m
 CYAN = \033[96m
-RESET = \033[0m
+END = \033[0m
