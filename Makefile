@@ -83,8 +83,15 @@ SRCS = \
    \
    ft_printf/ft_printf.c\
    ft_printf/ft_printf_utils.c\
+   ft_printf/ft_putchar.c\
+   ft_printf/ft_printf_utils.c\
+   ft_printf/ft_putnbr_base.c\
+   ft_printf/ft_putpointer.c\
+   ft_printf/ft_putstr.c\
    \
    get_next_line/get_next_line_bonus.c\
+   get_next_line/get_next_line_utils.c\
+   get_next_line/get_next_line.c\
 
 INCLUDES = include
 
