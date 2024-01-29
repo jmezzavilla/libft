@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap_mem.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: analexan <analexan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 13:05:24 by jealves-          #+#    #+#             */
-/*   Updated: 2023/11/10 16:25:50 by analexan         ###   ########.fr       */
+/*   Updated: 2023/09/26 15:26:31 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_swap_mem(void *a, void *b, size_t size)
 {
 	void	*tmp;
 
-	tmp = ft_calloc(1, size);
+	tmp = malloc(size);
 	if (tmp == NULL)
 		return (NULL);
 	ft_memcpy(tmp, a, size);

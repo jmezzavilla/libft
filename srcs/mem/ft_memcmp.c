@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: analexan <analexan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 22:33:34 by jealves-          #+#    #+#             */
-/*   Updated: 2023/11/09 11:43:05 by analexan         ###   ########.fr       */
+/*   Updated: 2023/09/14 22:33:36 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (count < n)
 	{
 		if (p1[count] != p2[count])
+		{
 			return (p1[count] - p2[count]);
+		}
 		count++;
 	}
 	return (0);

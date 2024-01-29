@@ -1,21 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 22:30:25 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/14 22:30:28 by jealves-         ###   ########.fr       */
+/*   Created: 2023/09/14 22:28:47 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:28:50 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+int	ft_putstr(char *str)
 {
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
+	int	count;
+
+	count = 0;
+	if (!str)
+		count += ft_putstr("(null)");
+	else
+	{
+		while (*str)
+		{
+			count += ft_putchar(*str);
+			str++;
+		}
+	}
+	return (count);
 }
+
+/* int main()
+{
+    int count;
+    count = ft_putstr("jessica");
+    printf("%d", count);
+} */

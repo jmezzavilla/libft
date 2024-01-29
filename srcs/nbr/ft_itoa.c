@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: analexan <analexan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 22:34:07 by jealves-          #+#    #+#             */
-/*   Updated: 2023/11/09 11:44:01 by analexan         ###   ########.fr       */
+/*   Updated: 2023/09/14 22:34:10 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ size_t	ft_digit_count(long int i)
 
 	count = 0;
 	if (i == 0)
+	{
 		count++;
+	}
 	if (i < 0)
 	{
 		i *= -1;
@@ -35,7 +37,9 @@ size_t	ft_digit_count(long int i)
 void	ft_write_str(char *str, long int nb, size_t size)
 {
 	if (nb == 0)
+	{
 		str[0] = '0';
+	}
 	if (nb < 0)
 	{
 		str[0] = '-';

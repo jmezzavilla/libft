@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: analexan <analexan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 22:33:29 by jealves-          #+#    #+#             */
-/*   Updated: 2023/11/09 11:42:59 by analexan         ###   ########.fr       */
+/*   Updated: 2023/09/14 22:33:31 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (n--)
 	{
 		if ((unsigned char)p[count] == (unsigned char)c)
+		{
 			return ((void *)(p + count));
+		}
 		count++;
 	}
 	return (0);

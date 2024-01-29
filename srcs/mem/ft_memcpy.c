@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: analexan <analexan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 22:33:44 by jealves-          #+#    #+#             */
-/*   Updated: 2023/11/09 11:43:08 by analexan         ###   ########.fr       */
+/*   Updated: 2023/09/14 22:33:49 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	if (!dest && !src)
 		return (NULL);
 	while (n--)
+	{
 		*d++ = *s++;
+	}
 	return (dest);
 }
 

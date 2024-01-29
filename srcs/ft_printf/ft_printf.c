@@ -3,106 +3,113 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: analexan <analexan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 11:11:55 by analexan          #+#    #+#             */
-/*   Updated: 2023/11/08 15:45:46 by analexan         ###   ########.fr       */
+/*   Created: 2023/09/14 22:28:18 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:28:22 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-/*
-#include <limits.h>
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdint.h>
-#include "ft_putchar_c.c"
-#include "ft_putstr_c.c"
-#include "ft_putnbr_c.c"
-int	main(void)
+int	ft_check_format(char format, va_list args)
 {
-	// char	name[] = "andre";
-	int		age = -155;
-	// unsigned int	uage = 3294967295;
-	char	str[] = //"name: %s, starts with %c, %% "
-					// "age: %d/%i/%u\n"
-					"that is %x/%X in hex "
-					"is being pointed by %p";
-	printf("\nstr len: %d\n", printf(str
-	// , name, name[0], age, age, uage
-	, 0, age, age));
-	printf("\nstr len: %d\n", ft_printf(str
-	// , name, name[0], age, age, uage
-	, 0, age, age));
-	return (0);
-}
-*/
-void	printhex(unsigned long num, int mode, long *ptr)
-{
-	if (!num && mode == 2)
-	{
-		ft_putstr_c("(nil)", ptr);
-		return ;
-	}
-	if (mode == 2)
-	{
-		ft_putchar_c('0', ptr);
-		ft_putchar_c('x', ptr);
-		mode = 0;
-	}
-	if (num >= 16)
-		printhex(num / 16, mode, ptr);
-	if (mode == 0)
-		ft_putchar_c("0123456789abcdef"[num % 16], ptr);
-	else if (mode == 1)
-		ft_putchar_c("0123456789ABCDEF"[num % 16], ptr);
+	int	count;
+
+	count = 0;
+	if (format == '%')
+		count += ft_putchar('%');
+	else if (format == 'c')
+		count += ft_putchar(va_arg(args, int));
+	else if (format == 's')
+		count += ft_putstr(va_arg(args, char *));
+	else if (format == 'p')
+		count += ft_putpointer(va_arg(args, unsigned long int));
+	else if (format == 'd' || format == 'i')
+		count += ft_putnbr_base(va_arg(args, int), DECIMAL);
+	else if (format == 'u')
+		count += ft_putnbr_base_us(va_arg(args, unsigned int), DECIMAL);
+	else if (format == 'x')
+		count += ft_putnbr_base_us(va_arg(args, unsigned int), HEXA_LOWER);
+	else if (format == 'X')
+		count += ft_putnbr_base_us(va_arg(args, unsigned int), HEXA_UPPER);
+	return (count);
 }
 
-int	chosentype(const char *format, va_list args, long *len)
+int	ft_printf(const char *str, ...)
 {
-	format++;
-	if (*format == 'c')
-		ft_putchar_c(va_arg(args, int), len);
-	else if (*format == 's')
-		ft_putstr_c(va_arg(args, char *), len);
-	else if (*format == 'p')
-		printhex(va_arg(args, unsigned long), 2, len);
-	else if (*format == 'd' || *format == 'i')
-		ft_putnbr_c(va_arg(args, int), len);
-	else if (*format == 'u')
-		ft_putnbr_c(va_arg(args, unsigned int), len);
-	else if (*format == 'x')
-		printhex(va_arg(args, unsigned int), 0, len);
-	else if (*format == 'X')
-		printhex(va_arg(args, unsigned int), 1, len);
-	else if (*format == '%')
-		ft_putchar_c('%', len);
-	else
-		return (-1);
-	return (*len);
-}
+	va_list	args;
+	size_t	count;
+	size_t	i;
 
-int	prt(const char *format, ...)
-{
-	va_list		args;
-	long		lenformat;
-
-	lenformat = 0;
-	va_start(args, format);
-	if (!format)
+	count = 0;
+	i = 0;
+	if (!str)
+		return (count);
+	va_start(args, str);
+	while (str[i])
 	{
-		write(1, "format is NULL\n", 15);
-		return (-1);
-	}
-	while (*format)
-	{
-		if (*format == '%')
-			chosentype(format++, args, &lenformat);
+		if (str[i] == '%')
+		{
+			count += ft_check_format(str[++i], args);
+		}
 		else
-			ft_putchar_c(*format, &lenformat);
-		format++;
+		{
+			count += ft_putchar(str[i]);
+		}
+		i++;
 	}
 	va_end(args);
-	return (lenformat);
+	return (count);
 }
+
+/* int	main(void)
+{
+	int	count;
+	int	countO;
+
+	ft_printf("teste percentual\n");
+	count = ft_printf("%%\n");
+	ft_printf("%d\n", count);
+	countO = printf("%%\n");
+	printf("%d\n\n", countO);
+	ft_printf("teste caractere\n");
+	count = ft_printf("%c\n", 'a');
+	ft_printf("%d\n", count);
+	countO = printf("%c\n", 'a');
+	printf("%d\n\n", countO);
+	ft_printf("teste string\n");
+	count = ft_printf("%s\n", "Jessica");
+	ft_printf("%d\n", count);
+	countO = printf("%s\n", "Jessica");
+	printf("%d\n\n", countO);
+	
+	ft_printf("teste pointer\n");
+	count = ft_printf("%p\n", "Jessica");
+	ft_printf("%d\n", count);
+	countO = printf("%p\n", "Jessica");
+	printf("%d\n\n", countO);
+	
+	ft_printf("teste decimal e integer\n");
+	count = ft_printf("%d\n", INT_MIN);
+	ft_printf("%d\n", count);
+	countO = printf("%d\n", INT_MIN);
+	printf("%d\n\n", countO);
+	count = ft_printf("%i\n", INT_MAX);
+	ft_printf("%d\n", count);
+	countO = printf("%i\n", INT_MAX);
+	printf("%d\n\n", countO);
+	
+	ft_printf("teste unsigned int\n");
+	count = ft_printf("%u\n", UINT_MAX);
+	ft_printf("%d\n", count);
+	countO = printf("%u\n",  UINT_MAX);
+	printf("%d\n\n", countO);
+	
+	ft_printf("teste hexadecimal\n");
+	count = ft_printf("%x\n", 424534658);
+	ft_printf("%d\n", count);
+	countO = printf("%x\n", 424534658);
+	printf("%d\n", countO);
+}
+ */

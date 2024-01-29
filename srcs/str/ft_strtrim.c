@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: analexan <analexan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 22:37:22 by jealves-          #+#    #+#             */
-/*   Updated: 2023/11/10 16:17:21 by analexan         ###   ########.fr       */
+/*   Updated: 2023/09/14 22:37:26 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 			start++;
 		while (s1[end - 1] && end > start && ft_strchr(set, s1[end - 1]))
 			end--;
-		newstr = (char *)ft_calloc(end - start + 1, sizeof(char));
+		newstr = (char *)malloc(sizeof(char) * (end - start + 1));
 		if (newstr)
 			ft_strlcpy(newstr, s1 + start, (end - start + 1));
 	}

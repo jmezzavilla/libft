@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_putpointer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/14 22:30:25 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/14 22:30:28 by jealves-         ###   ########.fr       */
+/*   Created: 2023/09/14 22:28:41 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/14 22:28:43 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+int	ft_putpointer(unsigned long int n)
 {
-	if (!lst || !del)
-		return ;
-	del(lst->content);
-	free(lst);
+	int	count;
+
+	count = 0;
+	if (!n)
+	{
+		count += ft_putstr("(nil)");
+		return (count);
+	}
+	count += ft_putstr("0x");
+	count += ft_putnbr_base_us(n, HEXA_LOWER);
+	return (count);
 }
