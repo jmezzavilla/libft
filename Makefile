@@ -61,6 +61,7 @@ SRCS = \
    str/ft_striteri.c\
    str/ft_strlcat.c\
    str/ft_strlen.c\
+   str/ft_strlen_matrix.c\
    str/ft_strlcpy.c\
    str/ft_strmapi.c\
    str/ft_strnstr.c\
